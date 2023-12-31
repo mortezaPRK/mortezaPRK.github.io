@@ -1,0 +1,143 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv/altacv}
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\usepackage{paracol}
+\usepackage[default]{lato}
+\usepackage[backend=biber,style=ieee,sorting=ydnt,defernumbers=true]{biblatex}
+
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+
+
+\begin{document}
+\name{Morteza Pourkazemi}
+\tagline{Software Engineer}
+\photoR{2.8cm}{me.jpeg}
+
+\personalinfo{
+  \email{mortzprk@protonmail.com}
+  \phone{+49 178 803 1485}
+  \location{Berlin, Germany}
+  \printinfo{\faGlobe}{mortz.dev}[https://mortz.dev/]
+  \printinfo{\faLinkedin}{linkedin.com/in/mortzprk/}[https://linkedin.com/in/mortzprk/]
+  \printinfo{\faGithub}{github.com/mortezaPRK/}[https://github.com/mortezaPRK/]
+}
+
+\makecvheader
+\AtBeginEnvironment{itemize}{\small}
+
+\columnratio{0.8}
+
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Senior Software Engineer}{HelloFresh SE}{November 2022 -- Ongoing}{Germany, Berlin}
+\begin{itemize}
+  \item Manage and organize Backend team
+\end{itemize}
+\divider
+
+\cvevent{Lead Software Engineer}{TDD}{February 2022 -- October 2022}{Iran, Tehran}
+\begin{itemize}
+  \item Led the merging of multiple microservices into a Monolith, cutting development time and improving efficiency.
+  \item Upgraded services in Typescript and Golang to improve performance, stability and maintainability.
+  \item Introduced CI/CD pipelines with Bitbucket, ensuring thorough testing and smooth delivery of features and bug fixes.
+  \item Integrated with third-party tools like Stripe, Firebase, HubSpot and Slack, enhancing system functionality and capabilities.
+\end{itemize}
+\divider
+
+\cvevent{Senior Software Engineer}{CafeBazaar}{August 2020 -- March 2022}{Iran, Tehran}
+\begin{itemize}
+  \item Develop and Maintain multiple RTB services using Golang and Python (Django)
+  \item Reduce resource consumption to handle more requests
+  \item Maintaining services to handle thousands of requests/second. (K8s)
+  \item Create data pipelines to store/process data more frequently (Yarn, HDFS, Kafka)
+\end{itemize}
+\divider
+
+\cvevent{Software Engineer}{Cosmopolis}{March 2020 -- September 2020}{France}
+\begin{itemize}
+  \item Create a medical web applications. (Django)
+  \item Test/Deploy web services automatically, using Gitlab CI/CD (Amazon EKS)
+  \item Add third-party integration  (Stripe, Amazon SES, Firebase)
+\end{itemize}
+\divider
+
+\cvevent{Software Engineer, Co-Founder}{Develoop}{November 2019 -- April 2020}{Iran, Tehran}
+\begin{itemize}
+  \item Manage the development of projects and developers.
+  \item Refactor legacy projects and creating CI/CD workflows.
+\end{itemize}
+\divider
+
+\cvevent{Software Engineer}{AppTech}{April 2019 -- November 2020}{Iran, Tehran}
+\divider
+
+\cvevent{Software Engineer}{Raypo}{July 2017 -- March 2020}{Iran, Tehran}
+\divider
+
+\switchcolumn
+
+\cvsection{Languages}
+
+\cvskill{English}{3}
+\cvskill{German}{1}
+
+\cvsection{Skils}
+
+\cvtag{Go}
+\cvtag{Python}
+\cvtag{Kotlin}
+\cvtag{TypeScript}
+\cvtag{Java}
+
+\divider\smallskip
+
+\cvtag{Docker}
+\cvtag{Kubernetes}
+\cvtag{GRPC}
+\cvtag{PostgreSQL}
+\cvtag{Gitlab CI/CD}
+\cvtag{Redis}
+\cvtag{Elastic Search}
+\cvtag{Prometheus}
+\cvtag{Kafka}
+\cvtag{YARN}
+\cvtag{Terraform}
+\cvtag{Helm}
+
+\divider\smallskip
+
+\cvtag{Django}
+\cvtag{FastAPI}
+\cvtag{NestJS}
+\cvtag{TypeORM}
+\cvtag{SQLAlchemy}
+\cvtag{Jest}
+\cvtag{Sentry}
+
+\cvsection{Hobbies}
+
+Basketball
+
+Board Games
+
+\cvsection{Education}
+
+\cvevent{B.Sc.\ in Physics}{University of Tehran}{}{}
+
+\end{paracol}
+\end{document}
