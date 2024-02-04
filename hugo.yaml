@@ -1,0 +1,8 @@
+baseURL: https://mortz.dev/
+languageCode: en-us
+title: Mortz's Corner
+theme: ananke
+copyright: Content licensed under CC0.
+enableGitInfo: true
+enableRobotsTXT: false
+enableEmoji: true
