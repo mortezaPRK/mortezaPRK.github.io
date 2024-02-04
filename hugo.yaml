@@ -1,0 +1,8 @@
+baseURL: https://mortz.dev/
+languageCode: en-us
+title: Mortz's Corner
+theme: hello-friend-ng
+copyright: Content licensed under CC0.
+
+params:
+  homeSubtitle: Comming soon!
