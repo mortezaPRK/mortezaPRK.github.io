@@ -34,7 +34,7 @@ build_resume: $(RESUME_OUT_STATIC_PATH)
 
 build_hugo:
 	@echo "Building hugo"
-	hugo
+	hugo --gc --minify $(if $(BASE_URL),--baseURL $(BASE_URL),)
 
 build: build_resume build_hugo
 
