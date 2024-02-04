@@ -1,0 +1,27 @@
+baseURL: https://mortz.dev/
+languageCode: en-us
+title: Mortz's Corner
+theme: hello-friend-ng
+copyright: Content licensed under CC0.
+enableGitInfo: true
+
+params:
+  logo:
+    logoMark: ">"
+    logoText: Resume
+    logoHomeLink: /cv.pdf
+  footer:
+    trademark: 2024
+    rss: false
+    copyright: true
+    bottomText:
+      - Powered by <a href="http://gohugo.io">Hugo</a>
+  homeSubtitle: Comming soon!
+  enableSharingButtons: true
+  social:
+    - name: email
+      url: mailto:me@mortz.dev
+    - name: github
+      url: https://github.com/mortezaPRK/
+    - name: linkedin
+      url: https://www.linkedin.com/in/mortzprk/
