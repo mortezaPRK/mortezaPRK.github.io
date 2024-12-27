@@ -30,10 +30,7 @@ params:
     copyright: true
     bottomText:
       - Powered by <a href="http://gohugo.io">Hugo</a>
-  homeSubtitle: |
-    Latest Posts
-
-    {{ .Posts }}
+  homeSubtitle: This is my corner of the internet. Welcome!
 
   social:
     - name: email
