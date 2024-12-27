@@ -3,4 +3,4 @@
 	url = https://github.com/rhazdon/hugo-theme-hello-friend-ng.git
 [submodule "resume/altacv"]
 	path = resume/altacv
-	url = https://github.com/mortezaPRK/AltaCV.git
+	url = https://github.com/liantze/AltaCV.git
