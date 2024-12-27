@@ -16,6 +16,7 @@ docker_cv_build:
 		--rm \
 		--workdir="/app" \
 		--network=none \
+		-u "0:0" \
 		-v "$(RESUME_DIR_ABS):/app" \
 		leplusorg/latex \
 		pdflatex -halt-on-error -output-directory=out -output-format=pdf -recorder cv.tex > /dev/null
