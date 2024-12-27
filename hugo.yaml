@@ -4,20 +4,37 @@ title: Mortz's Corner
 theme: hello-friend-ng
 copyright: Content licensed under CC0.
 enableGitInfo: true
+enableEmoji: true
+enableRobotsTXT: true
+disableRSS: true
+disableHugoGeneratorInject: true
+sectionPagesMenu: main
+
+module:
+  mounts:
+    - source: content
+      target: content
+
+permalinks:
+  posts: /posts/:year/:month/:title/
 
 params:
+  enableSharingButtons: true
   logo:
     logoMark: ">"
-    logoText: Resume
-    logoHomeLink: /cv.pdf
+    logoText: Home
+    logoHomeLink: /
   footer:
-    trademark: 2024
+    trademark: 2025
     rss: false
     copyright: true
     bottomText:
       - Powered by <a href="http://gohugo.io">Hugo</a>
-  homeSubtitle: Comming soon!
-  enableSharingButtons: true
+  homeSubtitle: |
+    Latest Posts
+
+    {{ .Posts }}
+
   social:
     - name: email
       url: mailto:me@mortz.dev
@@ -25,3 +42,27 @@ params:
       url: https://github.com/mortezaPRK/
     - name: linkedin
       url: https://www.linkedin.com/in/mortzprk/
+
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: true
+  instagram:
+    disable: true
+  twitter:
+    disable: true
+  vimeo:
+    disable: true
+  youtube:
+    disable: true
+
+taxonomies:
+  tag: tags
+  category: categories
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
