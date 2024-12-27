@@ -37,10 +37,11 @@ It was easy to install and use. All I had to do was to give access to the docker
 
 
 > [!CAUTION]
-> :loudspeaker: Giving access to the docker socket is a security risk!
+> **Giving access to the docker socket is a security risk!**
 
 I'm paranoid about security and I don't want to give access to the docker socket to any random tool. No hard feelings, deunhealth :melting_face:
 
+> [!NOTE]
 > The reason is, I don't want to review every line of code in the tool to make sure it's not doing anything malicious, let alone checking every release and dependency!
 
 
