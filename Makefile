@@ -8,7 +8,7 @@ RESUME_OUT_PATH := $(RESUME_DIR)/out/cv.pdf
 RESUME_OUT_STATIC_PATH := $(STATIC_DIR)/cv.pdf
 PORTRAIT_OUT_PATH := $(RESUME_DIR)/me.jpeg
 PORTRAIT_OUT_STATIC_PATH := $(STATIC_DIR)/me.jpeg
-
+TEX_IMAGE_NAME := registry.gitlab.com/islandoftex/images/texlive:latest
 
 docker_cv_build:
 	@echo "Building resume with docker"
@@ -18,8 +18,8 @@ docker_cv_build:
 		--network=none \
 		-u "0:0" \
 		-v "$(RESUME_DIR_ABS):/app" \
-		leplusorg/latex \
-		pdflatex -halt-on-error -output-directory=out -output-format=pdf -recorder cv.tex > /dev/null
+		$(TEX_IMAGE_NAME) \
+		pdflatex -halt-on-error -output-directory=out -output-format=pdf -recorder cv.tex
 
 $(RESUME_OUT_PATH): $(RESUME_DIR)/cv.tex $(PORTRAIT_OUT_PATH)
 	@echo "Building resume"
@@ -49,3 +49,6 @@ build: build_static build_hugo
 run: build_static
 	@echo "Running hugo"
 	@hugo server -D
+
+clean:
+	@git clean -xdf
