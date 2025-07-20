@@ -1,50 +1,45 @@
-.PHONY: build_hugo build_static run docker_cv_build
+.PHONY: build_hugo run docker_cv_build
 .DEFAULT_GOAL := build
 
 STATIC_DIR := static
-RESUME_DIR := resume
-RESUME_DIR_ABS := $(abspath $(RESUME_DIR))
-RESUME_OUT_PATH := $(RESUME_DIR)/out/cv.pdf
-RESUME_OUT_STATIC_PATH := $(STATIC_DIR)/cv.pdf
-PORTRAIT_OUT_PATH := $(RESUME_DIR)/me.jpeg
-PORTRAIT_OUT_STATIC_PATH := $(STATIC_DIR)/me.jpeg
-TEX_IMAGE_NAME := registry.gitlab.com/islandoftex/images/texlive:latest
 
-docker_cv_build:
-	@echo "Building resume with docker"
+
+#
+# Resume
+#
+
+YAMLRESUME_IMAGE := ghcr.io/yamlresume/yamlresume:v0.5.1
+RESUME_DIR := resume
+RESUME_OUT_DIR := $(RESUME_DIR)/out
+RESUME_SRC := $(RESUME_DIR)/cv.yml
+RESUME_PDF := $(RESUME_OUT_DIR)/cv.pdf
+RESUME_STATIC_PDF := $(STATIC_DIR)/cv.pdf
+
+$(RESUME_PDF): $(RESUME_SRC)
+	@echo "Building resume"
 	@docker run \
 		--rm \
-		--workdir="/app" \
 		--network=none \
+		--workdir="/app/out" \
 		-u "0:0" \
-		-v "$(RESUME_DIR_ABS):/app" \
-		$(TEX_IMAGE_NAME) \
-		pdflatex -halt-on-error -output-directory=out -output-format=pdf -recorder cv.tex
+		-v "$(abspath $(RESUME_DIR)):/app" \
+		$(YAMLRESUME_IMAGE) \
+		build ../cv.yml
 
-$(RESUME_OUT_PATH): $(RESUME_DIR)/cv.tex $(PORTRAIT_OUT_PATH)
-	@echo "Building resume"
-	@rm -rf $(RESUME_DIR)/out
-	@mkdir -p $(RESUME_DIR)/out
-	@$(MAKE) docker_cv_build
-	@$(MAKE) docker_cv_build
+$(RESUME_STATIC_PDF): $(RESUME_PDF)
+	@cp $(RESUME_PDF) $(RESUME_STATIC_PDF)
 
+#
+# End Resume
+#
 
-$(RESUME_OUT_STATIC_PATH): $(RESUME_OUT_PATH)
-	@echo "Copying resume to static"
-	@cp $(RESUME_OUT_PATH) $(RESUME_OUT_STATIC_PATH)
-
-$(PORTRAIT_OUT_STATIC_PATH): $(PORTRAIT_OUT_PATH)
-	@echo "Copying portrait to static"
-	@cp $(PORTRAIT_OUT_PATH) $(PORTRAIT_OUT_STATIC_PATH)
-
-
-build_static: $(RESUME_OUT_STATIC_PATH) $(PORTRAIT_OUT_STATIC_PATH)
+build_static: $(RESUME_STATIC_PDF)
 
 build_hugo: build_static
 	@echo "Building hugo"
-	hugo --gc --minify $(if $(BASE_URL),--baseURL $(BASE_URL),)
+	@hugo --gc --minify $(if $(BASE_URL),--baseURL $(BASE_URL),)
 
-build: build_static build_hugo
+build: build_hugo
 
 run: build_static
 	@echo "Running hugo"

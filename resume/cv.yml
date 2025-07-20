@@ -1,0 +1,215 @@
+# yaml-language-server: $schema=https://yamlresume.dev/schema.json
+---
+content:
+  basics:
+    name: Morteza Pourkazemi
+    headline: Software Engineer
+    phone: "+49 178 803 1485"
+    email: mortzprk@protonmail.com
+    url: https://mortz.dev
+    # - bold, (e.g, `**bold**`)
+    # - italic, (e.g, `*italic*`)
+    # - ordered list, unordored list and nested sub list
+    # - links (e.g. `[link](https://ppresume.com)`)
+    summary: |
+      - Senior Software Engineer with extensive experience in backend development and team management
+      - Expert in multiple programming languages including Go, Python, TypeScript, and Java
+      - Experienced with cloud technologies, microservices, and high-performance systems
+      - Strong background in DevOps practices and CI/CD pipeline implementation
+  location:
+    address: Zimmerstraße 94
+    city: Berlin
+    region: Berlin
+    country: Germany
+    postalCode: ___
+  profiles:
+    - network: GitHub
+      url: https://github.com/mortezaPRK/
+      username: mortezaPRK
+    - network: LinkedIn
+      url: https://linkedin.com/in/mortzprk/
+      username: mortzprk
+  education:
+    - institution: University of Tehran
+      url: https://ut.ac.ir/
+      degree: Bachelor
+      area: Physics
+  work:
+    - name: HelloFresh SE
+      url: https://hellofresh.com
+      startDate: Nov 1, 2022
+      endDate:
+      position: Senior Software Engineer
+      summary: |
+        - Manage and organize Backend team
+      keywords:
+        - Team Management
+        - Backend Development
+        - Leadership
+    - name: TDD
+      url: https://tdd.ir
+      startDate: Feb 1, 2022
+      endDate: Oct 1, 2022
+      position: Lead Software Engineer
+      summary: |
+        - Led the merging of multiple microservices into a Monolith, cutting development time and improving efficiency
+        - Upgraded services in Typescript and Golang to improve performance, stability and maintainability
+        - Introduced CI/CD pipelines with Bitbucket, ensuring thorough testing and smooth delivery of features and bug fixes
+        - Integrated with third-party tools like Stripe, Firebase, HubSpot and Slack, enhancing system functionality and capabilities
+      keywords:
+        - Microservices
+        - Monolith
+        - TypeScript
+        - Golang
+        - CI/CD
+        - Bitbucket
+        - Stripe
+        - Firebase
+        - HubSpot
+        - Slack
+    - name: CafeBazaar
+      url: https://cafebazaar.ir
+      startDate: Aug 1, 2020
+      endDate: Mar 1, 2022
+      position: Senior Software Engineer
+      summary: |
+        - Develop and Maintain multiple RTB services using Golang and Python (Django)
+        - Reduce resource consumption to handle more requests
+        - Maintaining services to handle thousands of requests/second. (K8s)
+        - Create data pipelines to store/process data more frequently (Yarn, HDFS, Kafka)
+      keywords:
+        - RTB
+        - Golang
+        - Python
+        - Django
+        - Kubernetes
+        - HDFS
+        - Kafka
+        - Data Pipelines
+    - name: Cosmopolis
+      url: https://cosmopolis.com
+      startDate: Mar 1, 2020
+      endDate: Sep 1, 2020
+      position: Software Engineer
+      summary: |
+        - Create a medical web applications. (Django)
+        - Test/Deploy web services automatically, using Gitlab CI/CD (Amazon EKS)
+        - Add third-party integration  (Stripe, Amazon SES, Firebase)
+      keywords:
+        - Django
+        - Medical Applications
+        - GitLab CI/CD
+        - Amazon EKS
+        - Stripe
+        - Amazon SES
+        - Firebase
+    - name: Develoop
+      url: https://develoop.ir
+      startDate: Nov 1, 2019
+      endDate: Apr 1, 2020
+      position: Software Engineer, Co-Founder
+      summary: |
+        - Manage the development of projects and developers
+        - Refactor legacy projects and creating CI/CD workflows
+      keywords:
+        - Project Management
+        - Legacy Refactoring
+        - CI/CD
+    - name: AppTech
+      url: https://apptech.ir
+      startDate: Apr 1, 2019
+      endDate: Nov 1, 2020
+      position: Software Engineer
+      summary: |
+        - Develop and Maintain multiple web applications using Django and React
+        - Create CI/CD pipelines to automate testing and deployment
+        - Integrate third-party services like Stripe and Firebase
+      keywords: []
+    - name: Raypo
+      url: https://raypo.ir
+      startDate: Jul 1, 2017
+      endDate: Mar 1, 2020
+      position: Software Engineer
+      summary: |
+        - Develop and Maintain multiple web applications using Django and React
+        - Create CI/CD pipelines to automate testing and deployment
+        - Integrate third-party services like Stripe and Firebase
+      keywords: []
+  languages:
+    - language: English
+      fluency: Full Professional Proficiency
+      keywords: []
+    - language: German
+      fluency: Elementary Proficiency
+      keywords: []
+  skills:
+    - name: Programming Languages
+      level: Expert
+      keywords:
+        - Go
+        - Python
+        - TypeScript
+        - Java
+        - Kotlin
+    - name: DevOps & Infrastructure
+      level: Advanced
+      keywords:
+        - Docker
+        - Kubernetes
+        - Gitlab CI/CD
+        - Terraform
+        - Helm
+        - Prometheus
+    - name: Databases & Data
+      level: Advanced
+      keywords:
+        - PostgreSQL
+        - Redis
+        - Elastic Search
+        - Kafka
+        - YARN
+    - name: Frameworks & Libraries
+      level: Expert
+      keywords:
+        - Django
+        - FastAPI
+        - NestJS
+        - TypeORM
+        - SQLAlchemy
+        - Jest
+        - Sentry
+    - name: Protocols & Architecture
+      level: Advanced
+      keywords:
+        - GRPC
+        - REST APIs
+        - Microservices
+  awards: []
+  certificates: []
+  publications: []
+  references: []
+  projects: []
+  interests:
+    - name: Sports
+      keywords:
+        - Basketball
+    - name: Games
+      keywords:
+        - Board Games
+  volunteer: []
+
+layout:
+  locale:
+    language: en
+  margins:
+    top: 2.5cm
+    left: 1.5cm
+    right: 1.5cm
+    bottom: 2.5cm
+  page:
+    showPageNumbers: true
+  # template: moderncv-banking
+  # template: moderncv-casual
+  template: moderncv-classic
+  typography:
+    fontSize: 11pt
