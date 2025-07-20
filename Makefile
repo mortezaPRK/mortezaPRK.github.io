@@ -1,10 +1,12 @@
 .PHONY: build_hugo run docker_cv_build
 .DEFAULT_GOAL := build
 
-HUGO_VERSION := 0.147.9
+HUGO_VERSION := 0.148.1
 HUGO_IMAGE := ghcr.io/gohugoio/hugo:v$(HUGO_VERSION)
 STATIC_DIR := static
 WORKDIR := $(abspath .)
+UID ?= 0
+GID ?= 0
 
 #
 # Resume
@@ -23,7 +25,7 @@ $(RESUME_PDF): $(RESUME_SRC)
 		--rm \
 		--network=none \
 		--workdir="/app/out" \
-		-u "0:0" \
+		-u "$(UID):$(GID)" \
 		-v "$(abspath $(RESUME_DIR)):/app" \
 		$(YAMLRESUME_IMAGE) \
 		build ../cv.yml
@@ -42,13 +44,12 @@ build_hugo: build_static
 	@docker run \
 		--rm \
 		--network=none \
-		--workdir="/app" \
 		--env HUGO_ENVIRONMENT=production \
         --env HUGO_ENV=production \
-		-u "0:0" \
-		-v "$(WORKDIR):/app" \
+		-u "$(UID):$(GID)" \
+		-v "$(WORKDIR):/project" \
 		$(HUGO_IMAGE) \
-		build --gc --minify $(if $(BASE_URL),--baseURL $(BASE_URL),)
+		build --minify $(if $(BASE_URL),--baseURL $(BASE_URL),) $(if $(CI),--noBuildLock, --gc)
 
 build: build_hugo
 
@@ -58,8 +59,8 @@ run: build_static
 		--rm \
 		--workdir="/app" \
 		-p 1313:1313 \
-		-u "0:0" \
-		-v "$(WORKDIR):/app" \
+		-u "$(UID):$(GID)" \
+		-v "$(WORKDIR):/project" \
 		$(HUGO_IMAGE) \
 		server --bind 0.0.0.0 --buildDrafts --watch --disableFastRender
 
