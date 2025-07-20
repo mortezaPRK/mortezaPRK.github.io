@@ -31,22 +31,17 @@ jobs:
           submodules: recursive
           fetch-depth: 1
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: "0.147.9"
-          extended: true
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
 
+      - name: Build static
+        run: make build_static
+
       - name: Build with Hugo
         env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
           BASE_URL: "${{ steps.pages.outputs.base_url }}/"
-        run: make build
+        run: make build UID=$(id -u) GID=$(id -g)
 
       - name: Upload artifact
         if: github.ref_name == github.event.repository.default_branch
