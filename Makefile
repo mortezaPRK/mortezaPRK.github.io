@@ -1,8 +1,10 @@
 .PHONY: build_hugo run docker_cv_build
 .DEFAULT_GOAL := build
 
+HUGO_VERSION := 0.147.9
+HUGO_IMAGE := ghcr.io/gohugoio/hugo:v$(HUGO_VERSION)
 STATIC_DIR := static
-
+WORKDIR := $(abspath .)
 
 #
 # Resume
@@ -37,13 +39,29 @@ build_static: $(RESUME_STATIC_PDF)
 
 build_hugo: build_static
 	@echo "Building hugo"
-	@hugo --gc --minify $(if $(BASE_URL),--baseURL $(BASE_URL),)
+	@docker run \
+		--rm \
+		--network=none \
+		--workdir="/app" \
+		--env HUGO_ENVIRONMENT=production \
+        --env HUGO_ENV=production \
+		-u "0:0" \
+		-v "$(WORKDIR):/app" \
+		$(HUGO_IMAGE) \
+		build --gc --minify $(if $(BASE_URL),--baseURL $(BASE_URL),)
 
 build: build_hugo
 
 run: build_static
 	@echo "Running hugo"
-	@hugo server -D
+	@docker run \
+		--rm \
+		--workdir="/app" \
+		-p 1313:1313 \
+		-u "0:0" \
+		-v "$(WORKDIR):/app" \
+		$(HUGO_IMAGE) \
+		server --bind 0.0.0.0 --buildDrafts --watch --disableFastRender
 
 clean:
 	@git clean -xdf
