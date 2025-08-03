@@ -38,6 +38,8 @@ This final version:
 
 But the journey to get there was interesting! Read on to see how I built this solution step by step.
 
+> Update: I'm working on a more generic solution: [container-mdns](https://github.com/mortezaPRK/container-mdns)
+
 ## The Problem
 
 I run several services at home using Docker containers with Traefik as a reverse proxy. While Traefik handles the routing based on hostnames, I still needed a way for devices on my network to discover these hostnames without:
