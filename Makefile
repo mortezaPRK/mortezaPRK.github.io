@@ -1,4 +1,4 @@
-.PHONY: build_hugo run docker_cv_build
+.PHONY: build_hugo run clean cv-all build_static
 .DEFAULT_GOAL := build
 
 HUGO_VERSION := 0.148.1
@@ -12,55 +12,58 @@ GID ?= 0
 # Resume
 #
 
-YAMLRESUME_IMAGE := ghcr.io/yamlresume/yamlresume:v0.5.1
+YAMLRESUME_IMAGE := ghcr.io/yamlresume/yamlresume:v0.8.1
 RESUME_DIR := resume
 RESUME_OUT_DIR := $(RESUME_DIR)/out
-RESUME_SRC := $(RESUME_DIR)/cv.yml
-RESUME_PDF := $(RESUME_OUT_DIR)/cv.pdf
-RESUME_STATIC_PDF := $(STATIC_DIR)/cv.pdf
+CV_VARIANTS := general startup scaleup enterprise freelance
 
-$(RESUME_PDF): $(RESUME_SRC)
-	@echo "Building resume"
+CV_SOURCES := $(addprefix $(RESUME_DIR)/cv-,$(addsuffix .yml,$(CV_VARIANTS)))
+CV_OUTPUTS := $(addprefix $(RESUME_OUT_DIR)/cv-,$(addsuffix .pdf,$(CV_VARIANTS)))
+CV_STATIC := $(addprefix $(STATIC_DIR)/cv-,$(addsuffix .pdf,$(CV_VARIANTS)))
+
+# Build a CV: make resume/out/cv-general.pdf
+$(RESUME_OUT_DIR)/cv-%.pdf: $(RESUME_DIR)/cv-%.yml
+	@echo "Building CV: $*"
+	@mkdir -p $(RESUME_OUT_DIR)
 	@docker run \
 		--rm \
 		--network=none \
-		--workdir="/app/out" \
+		--workdir="/app" \
 		-u "$(UID):$(GID)" \
-		-v "$(abspath $(RESUME_DIR)):/app" \
+		-v "$(abspath $(RESUME_DIR)):/app:z" \
 		$(YAMLRESUME_IMAGE) \
-		build ../cv.yml
+		build cv-$*.yml -o out
 
-$(RESUME_STATIC_PDF): $(RESUME_PDF)
-	@cp $(RESUME_PDF) $(RESUME_STATIC_PDF)
+$(STATIC_DIR)/cv-%.pdf: $(RESUME_OUT_DIR)/cv-%.pdf
+	@cp $< $@
+
+# Build all CV variants
+cv-all: $(CV_OUTPUTS)
 
 #
 # End Resume
 #
 
-build_static: $(RESUME_STATIC_PDF)
-
-build_hugo: build_static
+build: $(CV_STATIC)
+	@cp $(STATIC_DIR)/cv-general.pdf $(STATIC_DIR)/cv.pdf
 	@echo "Building hugo"
 	@docker run \
 		--rm \
 		--network=none \
 		--env HUGO_ENVIRONMENT=production \
-        --env HUGO_ENV=production \
+		--env HUGO_ENV=production \
 		-u "$(UID):$(GID)" \
-		-v "$(WORKDIR):/project" \
+		-v "$(WORKDIR):/project:z" \
 		$(HUGO_IMAGE) \
 		build --minify $(if $(BASE_URL),--baseURL $(BASE_URL),) $(if $(CI),--noBuildLock, --gc)
 
-build: build_hugo
-
-run: build_static
+run: $(CV_STATIC)
 	@echo "Running hugo"
 	@docker run \
 		--rm \
-		--workdir="/app" \
 		-p 1313:1313 \
 		-u "$(UID):$(GID)" \
-		-v "$(WORKDIR):/project" \
+		-v "$(WORKDIR):/project:z" \
 		$(HUGO_IMAGE) \
 		server --bind 0.0.0.0 --buildDrafts --watch --disableFastRender
 

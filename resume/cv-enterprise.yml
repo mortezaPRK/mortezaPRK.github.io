@@ -1,0 +1,215 @@
+# yaml-language-server: $schema=https://yamlresume.dev/schema.json
+# Enterprise / Large Company focused CV
+---
+layouts:
+  - engine: latex
+    sections:
+      order:
+        - basics
+        - work
+        - skills
+        - certificates
+        - projects
+        - education
+        - awards
+        - volunteer
+        - publications
+        - languages
+        - interests
+        - references
+content:
+  basics:
+    name: Morteza Pourkazemi
+    headline: Senior Software Engineer
+    phone: "+49 178 803 1485"
+    email: mortzprk@protonmail.com
+    url: https://mortz.dev
+    summary: |
+      9 years building distributed systems with enterprise-grade reliability. Designed GDPR-compliant microservices architectures at HelloFresh. Managed production systems at scale (HelloFresh, Cafe Bazaar with 45M+ users). Established engineering standards and interview processes across teams. Built on AWS and GCP, deployed with Kubernetes and Terraform. I architect with compliance in mind and create documentation that keeps systems running at 2 AM.
+  location:
+    city: Berlin
+    region: Berlin
+    country: Germany
+  profiles:
+    - network: GitHub
+      url: https://github.com/mortezaPRK/
+      username: mortezaPRK
+    - network: LinkedIn
+      url: https://linkedin.com/in/mortzprk/
+      username: mortzprk
+  work:
+    - name: HelloFresh SE
+      url: https://hellofresh.com
+      startDate: Nov 1, 2022
+      endDate:
+      position: Senior Software Engineer
+      summary: |
+        - Architected multi-subscription system integrated with HelloFresh core platform
+        - Designed GDPR compliance sidecar pattern for microservices architecture
+        - Company-wide Kafka Streams expert; standardized best practices
+        - Created comprehensive debugging documentation and runbooks
+        - Contributed PRs to internal platform tools used across engineering org
+        - Managed 4 production services with Kubernetes, Helm, and Terraform
+      keywords:
+        - Go
+        - Kotlin
+        - Kafka Streams
+        - Kubernetes
+        - Terraform
+        - Helm
+        - GDPR Compliance
+        - Microservices
+    - name: TDD
+      url: https://tdd.ir
+      startDate: Feb 1, 2022
+      endDate: Oct 1, 2022
+      position: Lead Software Engineer
+      summary: |
+        - Led technical team of 8 engineers for e-commerce platform
+        - Established Protobuf contracts for service communication
+        - Consolidated architecture from 12 microservices to maintainable monorepo
+        - Implemented CI/CD pipelines and deployment automation
+      keywords:
+        - Go
+        - Python
+        - Protobuf
+        - Kubernetes
+        - GKE
+        - CI/CD
+        - Engineering Standards
+    - name: Cafe Bazaar
+      url: https://cafebazaar.ir
+      startDate: Aug 1, 2020
+      endDate: Mar 1, 2022
+      position: Senior Software Engineer
+      summary: |
+        - Built high-traffic advertising platform at Iran's largest app store (45M+ users)
+        - Designed production logging and monitoring infrastructure
+        - Created interview documentation and standardized evaluation criteria
+        - Implemented async communication patterns (Kafka, gRPC, REST)
+        - Managed data pipelines with Airflow
+      keywords:
+        - Go
+        - Python
+        - PostgreSQL
+        - Apache Kafka
+        - Kubernetes
+        - Airflow
+        - gRPC
+        - Distributed Systems
+    - name: Cosmopolis
+      url: https://cosmopolis.fr
+      startDate: Mar 1, 2020
+      endDate: Apr 1, 2021
+      position: Software Engineer
+      summary: |
+        - Built medical web applications with compliance requirements
+        - Implemented CI/CD pipelines with GitLab and GKE
+        - Integrated third-party services (Stripe, Amazon SES, Firebase)
+      keywords:
+        - Python
+        - Django
+        - GCP
+        - GKE
+        - GitLab CI/CD
+        - Compliance
+    - name: Raypo
+      url: https://raypo.ir
+      startDate: Jul 1, 2017
+      endDate: Mar 1, 2020
+      position: Software Engineer
+      summary: |
+        - Built production system serving 12K concurrent users
+        - Optimized database queries; reduced processing from 30min to 3min
+        - Managed infrastructure with Docker and Kubernetes
+      keywords:
+        - Python
+        - PostgreSQL
+        - Docker
+        - Kubernetes
+        - Performance Optimization
+  languages:
+    - language: English
+      fluency: Full Professional Proficiency
+  skills:
+    - name: Cloud & Infrastructure
+      level: Advanced
+      keywords:
+        - Kubernetes
+        - Docker
+        - Terraform
+        - Helm
+        - ArgoCD
+        - AWS (EKS, ECR, S3)
+        - GCP (GKE)
+    - name: Languages & Frameworks
+      level: Expert
+      keywords:
+        - Go
+        - Golang
+        - Python
+        - Kotlin
+        - Django
+        - FastAPI
+    - name: Databases & Messaging
+      level: Expert
+      keywords:
+        - PostgreSQL
+        - Redis
+        - Apache Kafka
+        - Kafka Streams
+        - RabbitMQ
+    - name: Architecture & Standards
+      level: Advanced
+      keywords:
+        - Microservices
+        - Distributed Systems
+        - gRPC
+        - Protobuf
+        - REST API
+        - GDPR Compliance
+        - CI/CD
+    - name: Additional
+      level: Advanced
+      keywords:
+        - Event-Driven Architecture
+        - Agile
+        - Problem Solving
+  projects:
+    - name: kmir
+      url: https://github.com/mortezaPRK/kmir
+      startDate: Jan 1, 2023
+      summary: Kafka mirror CLI for local development — mirrors production topics for testing. Published on Docker Hub.
+      keywords:
+        - Go
+        - Kafka
+  education:
+    - institution: University of Tehran
+      url: https://ut.ac.ir/
+      degree: Bachelor
+      area: Physics
+      startDate: Sep 1, 2012
+      endDate: Jul 1, 2017
+      summary: |
+        - Thesis: Black hole simulation using Mathematica
+        - CERN collaboration: Developed simulation software in C++/Python for CMS detector project
+  awards: []
+  certificates: []
+  publications: []
+  references: []
+  interests: []
+  volunteer: []
+
+layout:
+  locale:
+    language: en
+  page:
+    margins:
+      top: 2.5cm
+      left: 1.5cm
+      right: 1.5cm
+      bottom: 2.5cm
+    showPageNumbers: true
+  template: moderncv-banking
+  typography:
+    fontSize: 11pt

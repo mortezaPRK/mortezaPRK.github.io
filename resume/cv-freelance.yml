@@ -1,0 +1,226 @@
+# yaml-language-server: $schema=https://yamlresume.dev/schema.json
+# Freelance / Contract focused CV
+---
+layouts:
+  - engine: latex
+    sections:
+      order:
+        - basics
+        - work
+        - skills
+        - certificates
+        - projects
+        - education
+        - awards
+        - volunteer
+        - publications
+        - languages
+        - interests
+        - references
+content:
+  basics:
+    name: Morteza Pourkazemi
+    headline: Backend Engineer for Hire | Go, Python, Kafka | MVP to Production
+    phone: "+49 178 803 1485"
+    email: mortzprk@protonmail.com
+    url: https://mortz.dev
+    summary: |
+      I deliver. 9 years rescuing failing projects, building MVPs that scaled to 12K users, and onboarding faster than expected (1 month at HelloFresh vs. typical 2). Full-stack capable: backend architecture, database optimization, DevOps, and enough frontend to be dangerous. Whether you need an MVP built fast, a legacy system rescued, or a performance bottleneck eliminated, I'll own it end-to-end and ship on time.
+
+      **Available for:** MVP development, system optimization, architecture consulting, team augmentation, legacy modernization.
+  location:
+    city: Berlin
+    region: Berlin
+    country: Germany
+  profiles:
+    - network: GitHub
+      url: https://github.com/mortezaPRK/
+      username: mortezaPRK
+    - network: LinkedIn
+      url: https://linkedin.com/in/mortzprk/
+      username: mortzprk
+  work:
+    - name: HelloFresh SE
+      url: https://hellofresh.com
+      startDate: Nov 1, 2022
+      endDate:
+      position: Senior Software Engineer
+      summary: |
+        - Sole backend engineer supporting 3 new brands in New Ventures tribe
+        - Delivered first project in 1 month (2x faster than typical onboarding)
+        - Architected multi-subscription system integrated with core platform
+        - Company-wide Kafka Streams expert; contributed to internal tooling
+        - Created documentation enabling non-engineers to debug production issues
+      keywords:
+        - Go
+        - Kotlin
+        - Kafka Streams
+        - Kubernetes
+        - Fast Delivery
+        - Documentation
+    - name: TDD
+      url: https://tdd.ir
+      startDate: Feb 1, 2022
+      endDate: Oct 1, 2022
+      position: Lead Software Engineer
+      summary: |
+        - Led team of 8 for e-commerce platform development
+        - Consolidated 12 microservices into single deployable monorepo
+        - Established engineering standards and Protobuf contracts
+        - Navigated stakeholder requirements while protecting delivery
+      keywords:
+        - Go
+        - Python
+        - Protobuf
+        - Technical Leadership
+        - Team Management
+    - name: Cafe Bazaar
+      url: https://cafebazaar.ir
+      startDate: Aug 1, 2020
+      endDate: Mar 1, 2022
+      position: Senior Software Engineer
+      summary: |
+        - Built high-traffic advertising platform at Iran's largest app store (45M+ users)
+        - Promoted to interviewer and mentor within 1 year
+        - Deep-dived into Go, PostgreSQL, Kafka, and distributed systems
+      keywords:
+        - Go
+        - Python
+        - PostgreSQL
+        - Apache Kafka
+        - High Traffic
+    - name: Cosmopolis
+      url: https://cosmopolis.fr
+      startDate: Mar 1, 2020
+      endDate: Apr 1, 2021
+      position: Software Engineer (Remote)
+      summary: |
+        - Built medical web applications with Django
+        - First international remote work experience
+        - Implemented CI/CD pipelines with GitLab and cloud infrastructure
+      keywords:
+        - Python
+        - Django
+        - GCP
+        - Remote Work
+        - International
+    - name: Develoop
+      url: https://develoop.ir
+      startDate: Nov 1, 2019
+      endDate: Apr 1, 2020
+      position: Software Engineer
+      summary: |
+        - Rescued failing Node.js project for Indian company with existing customers
+        - Debugged and improved inherited codebase while maintaining service
+        - Direct customer interaction (idea owners, stakeholders)
+      keywords:
+        - Node.js
+        - Python
+        - Customer Facing
+        - Legacy Rescue
+    - name: Raypo
+      url: https://raypo.ir
+      startDate: Jul 1, 2017
+      endDate: Mar 1, 2020
+      position: Software Engineer
+      summary: |
+        - Solo-built production game from Google Sheets MVP to 12K users
+        - Optimized batch processing from 30 minutes to 3 minutes
+        - Self-taught entire stack: PHP, Python, Docker, Kubernetes
+        - Continued as part-time consultant after transitioning
+      keywords:
+        - PHP
+        - Python
+        - PostgreSQL
+        - Solo Development
+        - Full Stack
+  languages:
+    - language: English
+      fluency: Full Professional Proficiency
+    - language: German
+      fluency: Elementary Proficiency
+  skills:
+    - name: Backend Development
+      level: Expert
+      keywords:
+        - Go
+        - Golang
+        - Python
+        - Node.js
+        - Django
+        - FastAPI
+        - REST API
+        - gRPC
+    - name: Databases & Messaging
+      level: Expert
+      keywords:
+        - PostgreSQL
+        - Redis
+        - Apache Kafka
+        - RabbitMQ
+    - name: Infrastructure
+      level: Advanced
+      keywords:
+        - Kubernetes
+        - Docker
+        - AWS
+        - GCP
+        - Terraform
+        - CI/CD
+    - name: Additional
+      level: Advanced
+      keywords:
+        - Distributed Systems
+        - Event-Driven Architecture
+        - Agile
+        - Problem Solving
+  projects:
+    - name: kmir
+      url: https://github.com/mortezaPRK/kmir
+      startDate: Jan 1, 2023
+      summary: Kafka mirror CLI for local development — mirrors production topics for testing. Published on Docker Hub.
+      keywords:
+        - Go
+        - Kafka
+        - Open Source
+    - name: cec-keyboard
+      url: https://github.com/mortezaPRK/cec-keyboard
+      startDate: Jan 1, 2022
+      summary: TV remote as keyboard via CEC protocol
+      keywords:
+        - Go
+        - Hardware
+    - name: container-mdns
+      url: https://github.com/mortezaPRK/container-mdns
+      startDate: Jan 1, 2021
+      summary: Container networking tool for mDNS
+      keywords:
+        - Go
+        - Networking
+  education:
+    - institution: University of Tehran
+      url: https://ut.ac.ir/
+      degree: Bachelor
+      area: Physics
+      startDate: Sep 1, 2012
+      endDate: Jul 1, 2017
+  awards: []
+  certificates: []
+  publications: []
+  references: []
+  interests: []
+  volunteer: []
+
+layout:
+  locale:
+    language: en
+  page:
+    margins:
+      top: 2.5cm
+      left: 1.5cm
+      right: 1.5cm
+      bottom: 2.5cm
+    showPageNumbers: true
+  template: moderncv-banking
+  typography:
+    fontSize: 11pt

@@ -1,0 +1,376 @@
+{
+  "personal": {
+    "years_of_experience": 9,
+    "current_title": "Senior Software Engineer",
+    "location": "Berlin, Germany",
+    "work_authorization": "Germany"
+  },
+  
+  "core_strengths": [
+    "0-to-1 product development and MVP validation",
+    "Backend architecture for high-scale systems (12K+ concurrent users)",
+    "Deep technical problem-solving (reduced processing time from 30min to 3min)",
+    "Rapid technology adoption (delivered in 1 month vs typical 2-month onboarding)",
+    "Cross-functional collaboration (stakeholders, designers, product)",
+    "Technical mentoring and knowledge transfer",
+    "Performance optimization and database design",
+    "Managing ambiguity and fast-changing requirements",
+    "End-to-end ownership (idea → deployment → iteration)"
+  ],
+  
+  "technical_expertise": {
+    "expert": {
+      "languages": ["Go", "Python", "SQL"],
+      "databases": ["PostgreSQL (CTEs, query optimization, transactions)", "Redis"],
+      "messaging": ["Apache Kafka", "Kafka Streams", "RabbitMQ"],
+      "backend": ["REST API design", "gRPC", "Protobuf", "GraphQL"],
+      "concepts": ["Microservices architecture", "Monorepo strategies", "Database optimization"]
+    },
+    "proficient": {
+      "languages": ["Kotlin", "PHP", "JavaScript/TypeScript", "Java"],
+      "frameworks": ["Django", "FastAPI", "Node.js", "Yii2"],
+      "infrastructure": ["Kubernetes", "Docker", "Terraform", "Helm"],
+      "cloud": ["AWS (EKS, ECR, EC2, S3, SNS)", "GCP (GKE)"],
+      "tools": ["Celery", "Airflow", "ArgoCD", "GitLab CI/CD"],
+      "monitoring": ["Logging architecture", "Metrics design", "Dashboard creation", "On-call systems"]
+    },
+    "familiar": {
+      "languages": ["Scala"],
+      "frameworks": ["Angular v2"],
+      "tools": ["ZeroMQ", "NATS"],
+      "platforms": ["Firebase"]
+    },
+    "learning_approach": "Deep understanding of fundamentals; reads source code to understand frameworks; prefers building from first principles"
+  },
+  
+  "areas_for_growth": {
+    "technical": [
+      "UI/UX design (can conceptualize but shouldn't implement)",
+      "Frontend frameworks (functional understanding only)"
+    ],
+    "soft_skills": [
+      "Self-promotion and visibility",
+      "Design communication (different mental models)",
+      "Prefer technical leadership over people management"
+    ]
+  },
+  
+  "work_history": [
+    {
+      "company": "HelloFresh",
+      "location": "Berlin, Germany",
+      "title": "Senior Software Engineer",
+      "dates": "Nov 2022 - Present",
+      "duration": "3 years 2 months",
+      "context": "Only backend engineer in New Ventures tribe for 3 years, supporting 3 brands (Gutshop meat subscription, Pet Stable dog food)",
+      "technologies": ["Go", "Kotlin", "Kafka Streams", "Kubernetes", "Helm", "Terraform", "Python", "TypeScript"],
+      "key_achievements": [
+        "Architected multi-subscription per customer system, now backbone of HelloFresh supporting families (previously 1 subscription limit)",
+        "Delivered first Kotlin project in 1 month (2x faster than typical onboarding)",
+        "Became company-wide Kafka Streams expert; contributed to and deprecated internal framework to reduce abstraction layers",
+        "Designed sidecar pattern for GDPR compliance in microservices architecture",
+        "Created debugging playbooks enabling frontend engineers to handle backend on-call (5-year-old explanation level)",
+        "Mentored frontend engineer to full-stack backend engineer (JavaScript → Go/Kubernetes/Postgres in 6 months, delivered solo project)",
+        "Made cross-team contributions with PRs to internal tools used company-wide"
+      ],
+      "challenges": [
+        "Sole backend engineer managing 4 services without backend on-call support",
+        "Requirements changed daily; worked on projects abandoned due to reorganizations",
+        "Balanced quick MVP delivery with future scalability for HelloFresh core handoff",
+        "Enabled non-backend engineers to debug and resolve production issues independently"
+      ],
+      "domains": "Payments, deliveries, loyalty programs, customer care, subscription management, multi-entity ordering"
+    },
+    {
+      "company": "TDD",
+      "location": "Tehran, Iran (Remote)",
+      "title": "Lead Software Engineer",
+      "dates": "Feb 2022 - Nov 2022",
+      "duration": "10 months",
+      "context": "Tech lead for e-commerce platform with 3 backend, 2 frontend, 2 Android, 1 iOS engineers + PM + designer",
+      "technologies": ["Go", "Python", "Protobuf", "Docker", "Kubernetes", "GKE", "Redis", "PostgreSQL", "Apache Kafka", "Node.js", "Firebase"],
+      "key_achievements": [
+        "Consolidated 12 microservices into single monorepo with 12 modules using Protobuf contracts",
+        "Reduced deployment complexity from 12 separate deploys to 1 unified deployment",
+        "Established engineering standards and technical direction",
+        "Navigated CEO's strong technical opinions while protecting team from churn",
+        "Built first Kafka Streams project in Kotlin, convinced non-Kotlin team to adopt it"
+      ],
+      "challenges": [
+        "Inherited over-engineered architecture (12 microservices for unlaunched product)",
+        "Managed opinionated CEO with strong tech preferences (MongoDB, excessive microservices)",
+        "Acted as 'shield' between leadership and engineering team",
+        "Onboarded and managed engineer lacking fundamental skills; had to escalate for team health"
+      ]
+    },
+    {
+      "company": "Cafe Bazaar",
+      "location": "Tehran, Iran",
+      "title": "Senior Software Engineer",
+      "dates": "Aug 2020 - Mar 2022",
+      "duration": "1 year 8 months",
+      "context": "Iran's largest Android app store (domestic Google Play alternative due to sanctions). Started in video platform, moved to smart advertising",
+      "technologies": ["Go", "Python", "Django", "PostgreSQL", "Apache Kafka", "Redis", "Kubernetes", "Docker", "Airflow", "gRPC", "GitLab CI/CD"],
+      "key_achievements": [
+        "Promoted to interviewer and mentor within 1 year; created interview documentation and evaluation criteria",
+        "Mastered production logging and monitoring; designed metrics and dashboards for on-call efficiency",
+        "Learned importance of metric/dashboard design: too many metrics starve apps, bad dashboards confuse on-call engineers",
+        "Handled high-traffic advertising platform (full company load vs previous smaller traffic)",
+        "Deep-dived into Go, PostgreSQL, Airflow, microservices, async/sync communication (Protobuf, GraphQL, REST, NATS, RabbitMQ)"
+      ],
+      "context_shift": "First day realized knowledge gaps; became strong engineer within a year through intensive learning",
+      "domains": "Video streaming, advertising optimization, user behavior analysis, partner integrations"
+    },
+    {
+      "company": "Cosmopolis",
+      "location": "France (Remote)",
+      "title": "Software Engineer",
+      "dates": "Mar 2020 - Apr 2021",
+      "duration": "1 year 2 months",
+      "context": "First international exposure during COVID; tried management path",
+      "technologies": ["Python", "Django", "Celery", "Docker", "Kubernetes", "GKE", "PostgreSQL", "Firebase", "GitLab CI/CD"],
+      "key_achievements": [
+        "First exposure to GCP and international development tools/practices",
+        "Attempted management role; confirmed preference for technical track",
+        "Remote collaboration with distributed team"
+      ],
+      "learnings": "Discovered preference for technical work over people management; prefers working with systems over personnel issues"
+    },
+    {
+      "company": "Raypo",
+      "location": "Tehran, Iran",
+      "title": "Software Engineer / DevOps Engineer",
+      "dates": "Jul 2017 - Feb 2022",
+      "duration": "4 years 8 months (part-time consultant after full-time role)",
+      "context": "First professional role; solo developer creating game from scratch, then Python migration project",
+      "technologies": ["PHP", "Yii2", "Python", "Django", "PostgreSQL", "Redis", "Docker", "Kubernetes", "Celery", "RabbitMQ", "Angular v2", "Java", "Kotlin"],
+      "key_achievements": [
+        "Built MVP in Google Sheets, convinced stakeholder, delivered full game solo",
+        "Launched with 12K concurrent users; optimized backend processing from 30 minutes to 3 minutes within 2 weeks",
+        "Migrated calculations from PHP to database (CTEs, transactions, state management in SQL)",
+        "Led Python 2→3 and Django upgrade; refactored poorly structured codebase (leaked logic, duplicated code) into testable, maintainable system in 3 months",
+        "Learned Kubernetes 'the hard way' (bare metal cluster setup)",
+        "Collaborated with Android/iOS/frontend teams on back-office system (Angular v2)",
+        "Self-taught: JavaScript, PHP, Python, Java, Kotlin, Docker, K8s, Angular, Android basics"
+      ],
+      "progression": "Junior → Software Engineer → DevOps part-time consultant",
+      "note": "Thrived in startup chaos; delivered working solutions over perfect code; end-to-end ownership"
+    },
+    {
+      "company": "Develoop",
+      "location": "Tehran, Iran",
+      "title": "Software Engineer",
+      "dates": "Nov 2019 - Apr 2020",
+      "duration": "6 months",
+      "context": "Accelerator with 30-40 people; small teams per project; rescued failing Indian company's Node.js project",
+      "technologies": ["Node.js", "Python", "Django", "Celery", "ZeroMQ", "PostgreSQL", "Docker", "GKE", "Firebase", "GitLab CI/CD"],
+      "key_achievements": [
+        "First direct customer interaction experience (idea owners, stakeholders)",
+        "Learned team processes, collaboration, and why processes matter (previously 'lone wolf')",
+        "Debugged and improved inherited Node.js codebase with existing customers",
+        "Adapted to structured team environment with defined processes"
+      ],
+      "learnings": "First experience working in organized team vs solo; learned process management and customer communication"
+    },
+    {
+      "company": "AppTech",
+      "location": "Tehran, Iran", 
+      "title": "Software Engineer",
+      "dates": "Apr 2019 - Nov 2019",
+      "duration": "8 months",
+      "technologies": ["Python", "Django", "Celery", "RabbitMQ", "Redis", "ZeroMQ", "Node.js", "PostgreSQL", "Docker", "Firebase", "GitLab CI/CD"]
+    }
+  ],
+  
+  "specialized_knowledge": {
+    "kafka_streams": {
+      "level": "Company-wide expert",
+      "depth": "Studied Kafka source code for 6-7 months post-delivery to understand internals",
+      "contributions": "Deprecated company framework to reduce abstraction; advocate for using Kafka Streams directly",
+      "first_experience": "Learned Kafka Streams + Kotlin simultaneously as first HelloFresh project"
+    },
+    "database_optimization": {
+      "achievement": "Reduced 30-minute batch processing to 3 minutes by moving logic from application to database (CTEs, optimized queries)",
+      "expertise": "PostgreSQL query optimization, transaction management, state handling in SQL"
+    },
+    "system_design": {
+      "examples": [
+        "Multi-entity ordering system (person buys, dog uses product)",
+        "GDPR compliance sidecar pattern for microservices",
+        "Microservices consolidation strategy (12→1 monorepo)",
+        "High-traffic advertising platform"
+      ]
+    },
+    "0_to_1_products": {
+      "examples": [
+        "Solo-built game from Google Sheets MVP to production (12K users)",
+        "Pet Stable subscription system with tight deadlines",
+        "E-commerce platform technical direction"
+      ]
+    }
+  },
+  
+  "work_style": {
+    "thrives_in": [
+      "Fast-changing requirements and ambiguity",
+      "New ventures / startups / 0-to-1 products",
+      "End-to-end ownership scenarios",
+      "Technical deep-dives and root cause analysis",
+      "Mentoring and knowledge sharing",
+      "Handling production incidents independently"
+    ],
+    "challenges_with": [
+      "Self-promotion (active in technical channels, invisible to leadership)",
+      "Design team communication (different mental models)",
+      "People management (prefers technical leadership)",
+      "Slow-moving processes without clear technical challenges"
+    ],
+    "collaboration": {
+      "strengths": "Cross-functional communication (product, frontend, stakeholders), technical mentoring, creating accessible documentation",
+      "approach": "Proactive problem-solver; identifies issues and delivers PRs to internal teams; takes ownership beyond immediate scope"
+    }
+  },
+  
+  "additional_context": {
+    "education": "Bachelor's in Physics; thesis on black hole simulation using Mathematica",
+    "cern_collaboration": {
+      "description": "Collaborated with CERN on new detector installation project",
+      "verification": [
+        "https://github.com/mortezaPRK/NewDiamondProducer",
+        "https://github.com/mortezaPRK/NewDiamondSimulation"
+      ],
+      "technologies": "C, C++, Python, CMSSW (CMS Software Framework)",
+      "note": "Archived repos, publicly verifiable"
+    },
+    "side_projects": [
+      {
+        "name": "kmir",
+        "description": "Kafka mirror CLI tool for local development",
+        "url": "https://github.com/mortezaPRK/kmir",
+        "technologies": "Go, Kafka",
+        "published": "Docker Hub",
+        "note": "Demonstrates Kafka expertise and tool-building"
+      },
+      {
+        "name": "cec-keyboard",
+        "description": "Use TV remote as keyboard through CEC protocol",
+        "url": "https://github.com/mortezaPRK/cec-keyboard",
+        "technologies": "Go, CEC protocol",
+        "note": "Hardware/embedded systems work"
+      },
+      {
+        "name": "container-mdns",
+        "description": "Container networking tool",
+        "url": "https://github.com/mortezaPRK/container-mdns",
+        "technologies": "Go",
+        "note": "Infrastructure tooling"
+      },
+      {
+        "name": "Raspberry Pi home entertainment",
+        "description": "Frontend for 15-year-old TV via HDMI (logic implementation)",
+        "technologies": "Raspberry Pi, Python/Go (logic), friend handled UI"
+      },
+      {
+        "name": "Flutter application",
+        "description": "Mobile app backend logic",
+        "technologies": "Flutter (backend logic only, UI by friend)"
+      }
+    ],
+    "github_profile": {
+      "url": "https://github.com/mortezaPRK",
+      "repositories": 19,
+      "achievements": "Pair Extraordinaire x3, Pull Shark x3, Quickdraw, YOLO",
+      "note": "Active contributor, publishes tools, helps community"
+    },
+    "hobbies": "Reading code (studies framework source code for understanding), building side projects, Raspberry Pi/hardware tinkering",
+    "interview_performance": {
+      "hellofresh_story": "Failed 3 of 5-6 rounds (over-engineered take-home, algorithm challenge with accent barrier, offline coding) but hired based on director's confidence in ability to deliver; proved correct with 2x faster onboarding",
+      "strengths": "System design, real-world problem solving, technical depth",
+      "weaknesses": "Algorithm challenges under pressure, over-engineering when trying to demonstrate knowledge"
+    }
+  },
+
+  "resume_frameworks": {
+    "full_time_startup": {
+      "headline": "Senior Backend Engineer | 0-to-1 Product Builder | Expert in Go, Kafka, PostgreSQL",
+      "summary_focus": [
+        "9 years building products from MVP to scale",
+        "Solo-built game serving 12K concurrent users; optimized from 30min to 3min processing",
+        "Only backend engineer in HelloFresh New Ventures for 3 years (3 brands)",
+        "Deep technical problem-solver: reads framework source code, contributes cross-team",
+        "Thrives in ambiguity and rapid iteration"
+      ],
+      "highlight_roles": ["HelloFresh", "Raypo", "TDD"],
+      "emphasize": ["0-to-1 building", "solo ownership", "fast delivery", "chaos management", "end-to-end ownership"]
+    },
+    
+    "full_time_scaleup": {
+      "headline": "Senior Software Engineer | Backend Architecture | Scalability & Performance Expert",
+      "summary_focus": [
+        "9 years scaling systems from MVP to production loads",
+        "Architected multi-subscription system now core to HelloFresh",
+        "12K concurrent user game; 30min→3min optimization via database redesign",
+        "Consolidated 12 microservices to maintainable monorepo",
+        "Company-wide Kafka Streams expert at HelloFresh",
+        "Interviewer and mentor at scale-up environments (Bazaar, HelloFresh)"
+      ],
+      "highlight_roles": ["HelloFresh", "Cafe Bazaar", "TDD"],
+      "emphasize": ["scalability", "performance optimization", "architecture", "mentoring", "high-traffic systems"]
+    },
+    
+    "full_time_enterprise": {
+      "headline": "Senior Software Engineer | Microservices & Cloud Infrastructure | Go, Kafka, Kubernetes",
+      "summary_focus": [
+        "9 years building distributed systems at scale",
+        "Backend architect for HelloFresh New Ventures (3 brands, 4 services)",
+        "GDPR compliance design for microservices (sidecar pattern)",
+        "Production systems at Iran's largest app store (Bazaar)",
+        "Cloud infrastructure: AWS (EKS, ECR, S3), GCP (GKE), Kubernetes, Terraform",
+        "Established engineering standards and interview processes"
+      ],
+      "highlight_roles": ["HelloFresh", "Cafe Bazaar", "TDD"],
+      "emphasize": ["microservices", "cloud platforms", "compliance", "standards", "distributed systems", "team processes"]
+    },
+    
+    "freelance_contract_technical": {
+      "headline": "Backend Engineer for Hire | Go, Python, Kafka | MVP to Production",
+      "summary_focus": [
+        "9 years delivering backend solutions",
+        "Fast delivery: 1-month HelloFresh onboarding vs 2-month typical",
+        "Solo-built production game (12K users); rescued Node.js project",
+        "Can handle full stack: backend architecture, database design, DevOps, basic frontend",
+        "Technologies: Go, Python, Kafka, PostgreSQL, Kubernetes, AWS, GCP",
+        "Available for: MVP development, system optimization, architecture consulting, team augmentation"
+      ],
+      "highlight_roles": ["HelloFresh", "TDD", "Cosmopolis", "Raypo"],
+      "emphasize": ["fast delivery", "full-stack capability", "problem-solving", "diverse tech stack", "immediate contributor"]
+    },
+    
+    "freelance_contract_leadership": {
+      "headline": "Technical Lead & Architect | Backend Systems | Team Mentoring",
+      "summary_focus": [
+        "9 years building and leading backend teams",
+        "Tech lead for e-commerce platform (8-person team)",
+        "Solo backend engineer supporting 3 brands at HelloFresh for 3 years",
+        "Mentored engineers from junior to independent delivery",
+        "System design: microservices, event-driven, high-scale",
+        "Available for: Technical leadership, architecture consulting, team building, fractional CTO"
+      ],
+      "highlight_roles": ["TDD", "HelloFresh", "Cafe Bazaar"],
+      "emphasize": ["leadership", "mentoring", "architecture", "team building", "strategic thinking"]
+    }
+  },
+
+  "ats_keywords": {
+    "languages": ["Go", "Golang", "Python", "Kotlin", "PHP", "JavaScript", "TypeScript", "Java", "SQL"],
+    "frameworks": ["Django", "FastAPI", "Node.js", "Yii2", "Angular"],
+    "databases": ["PostgreSQL", "Redis", "MySQL"],
+    "messaging": ["Apache Kafka", "Kafka Streams", "RabbitMQ", "NATS", "ZeroMQ"],
+    "cloud": ["AWS", "GCP", "EKS", "GKE", "EC2", "S3", "ECR", "SNS"],
+    "infrastructure": ["Kubernetes", "Docker", "Terraform", "Helm", "ArgoCD"],
+    "api": ["REST API", "gRPC", "GraphQL", "Protobuf"],
+    "tools": ["Celery", "Airflow", "GitLab CI/CD", "Firebase"],
+    "concepts": ["Microservices", "Monorepo", "CI/CD", "System Design", "Performance Optimization", "GDPR Compliance", "Event-Driven Architecture", "Distributed Systems"],
+    "soft_skills": ["Technical Leadership", "Mentoring", "Cross-functional Collaboration", "Stakeholder Management", "Problem Solving", "0-to-1 Products", "Agile"]
+  }
+}

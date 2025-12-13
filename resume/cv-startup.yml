@@ -1,0 +1,178 @@
+# yaml-language-server: $schema=https://yamlresume.dev/schema.json
+# Startup / 0-to-1 Product Builder focused CV
+---
+layouts:
+  - engine: latex
+    sections:
+      order:
+        - basics
+        - work
+        - skills
+        - certificates
+        - projects
+        - education
+        - awards
+        - volunteer
+        - publications
+        - languages
+        - interests
+        - references
+content:
+  basics:
+    name: Morteza Pourkazemi
+    headline: Senior Backend Engineer | 0-to-1 Product Builder | Go, Kafka, PostgreSQL
+    phone: "+49 178 803 1485"
+    email: mortzprk@protonmail.com
+    url: https://mortz.dev
+    summary: |
+      9 years building products from zero to one. Solo-built a game serving 12K concurrent users; optimized batch processing from 30min to 3min. At HelloFresh, I've been the only backend engineer for 3 brands, shipping daily while requirements changed hourly. I onboard 2x faster than typical, thrive in ambiguity, and take end-to-end ownership. Give me chaos and I'll give you a working product.
+  location:
+    city: Berlin
+    region: Berlin
+    country: Germany
+  profiles:
+    - network: GitHub
+      url: https://github.com/mortezaPRK/
+      username: mortezaPRK
+    - network: LinkedIn
+      url: https://linkedin.com/in/mortzprk/
+      username: mortzprk
+  work:
+    - name: HelloFresh SE
+      url: https://hellofresh.com
+      startDate: Nov 1, 2022
+      endDate:
+      position: Senior Software Engineer
+      summary: |
+        - Sole backend engineer in New Ventures tribe, building 3 new brands from scratch
+        - Architected multi-subscription system that became core HelloFresh infrastructure
+        - Delivered first project in 1 month (2x faster than typical 2-month onboarding)
+        - Balanced quick MVP delivery with future scalability for core platform handoff
+        - Created documentation enabling non-backend engineers to debug production issues
+        - Requirements changed daily; adapted quickly while maintaining delivery velocity
+      keywords:
+        - Go
+        - Kotlin
+        - Kafka Streams
+        - 0-to-1 Products
+        - MVP Development
+        - Fast Iteration
+    - name: TDD
+      url: https://tdd.ir
+      startDate: Feb 1, 2022
+      endDate: Oct 1, 2022
+      position: Lead Software Engineer
+      summary: |
+        - Led technical direction for e-commerce platform from pre-launch to production
+        - Consolidated over-engineered 12 microservices into manageable monorepo
+        - Shielded engineering team from churn while delivering on tight deadlines
+        - Built first Kafka Streams project, convinced team to adopt new technology
+      keywords:
+        - Go
+        - Python
+        - Technical Leadership
+        - Microservices Consolidation
+        - Startup Environment
+    - name: Cafe Bazaar
+      url: https://cafebazaar.ir
+      startDate: Aug 1, 2020
+      endDate: Mar 1, 2022
+      position: Senior Software Engineer
+      summary: |
+        - Built high-traffic advertising platform at Iran's largest app store (45M+ users)
+        - Joined with knowledge gaps, became strong contributor within 1 year
+        - Deep-dived into Go, PostgreSQL, Kafka, and distributed systems
+      keywords:
+        - Go
+        - Python
+        - PostgreSQL
+        - Apache Kafka
+        - Rapid Learning
+        - High Traffic
+    - name: Raypo
+      url: https://raypo.ir
+      startDate: Jul 1, 2017
+      endDate: Mar 1, 2020
+      position: Software Engineer
+      summary: |
+        - Built production game from scratch as solo developer
+        - Validated concept in Google Sheets MVP, convinced stakeholder, delivered full product
+        - Launched to 12K concurrent users; optimized 30min batch processing to 3min in 2 weeks
+        - Self-taught entire stack: PHP, Python, Docker, Kubernetes, Angular, mobile basics
+        - Thrived in startup chaos; end-to-end ownership from idea to production
+      keywords:
+        - PHP
+        - Python
+        - PostgreSQL
+        - Solo Development
+        - MVP to Production
+        - Performance Optimization
+  languages:
+    - language: English
+      fluency: Full Professional Proficiency
+    - language: German
+      fluency: Elementary Proficiency
+  skills:
+    - name: Core Technologies
+      level: Expert
+      keywords:
+        - Go
+        - Golang
+        - Python
+        - PostgreSQL
+        - Kafka
+        - Kubernetes
+        - Docker
+    - name: Strengths
+      level: Expert
+      keywords:
+        - 0-to-1 Products
+        - Solo Ownership
+        - Fast Delivery
+        - End-to-End Development
+        - Performance Optimization
+    - name: Additional
+      level: Advanced
+      keywords:
+        - Distributed Systems
+        - Event-Driven Architecture
+        - Agile
+        - CI/CD
+  projects:
+    - name: kmir
+      url: https://github.com/mortezaPRK/kmir
+      startDate: Jan 1, 2023
+      summary: Kafka mirror CLI for local development — mirrors production topics for testing. Published on Docker Hub.
+      keywords:
+        - Go
+        - Kafka
+  education:
+    - institution: University of Tehran
+      url: https://ut.ac.ir/
+      degree: Bachelor
+      area: Physics
+      startDate: Sep 1, 2012
+      endDate: Jul 1, 2017
+      summary: |
+        - Thesis: Black hole simulation using Mathematica
+        - CERN collaboration: Developed simulation software for CMS detector installation project
+  awards: []
+  certificates: []
+  publications: []
+  references: []
+  interests: []
+  volunteer: []
+
+layout:
+  locale:
+    language: en
+  page:
+    margins:
+      top: 2.5cm
+      left: 1.5cm
+      right: 1.5cm
+      bottom: 2.5cm
+    showPageNumbers: true
+  template: moderncv-banking
+  typography:
+    fontSize: 11pt

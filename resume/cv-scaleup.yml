@@ -1,0 +1,191 @@
+# yaml-language-server: $schema=https://yamlresume.dev/schema.json
+# Scale-up / Growth Company focused CV
+---
+layouts:
+  - engine: latex
+    sections:
+      order:
+        - basics
+        - work
+        - skills
+        - certificates
+        - projects
+        - education
+        - awards
+        - volunteer
+        - publications
+        - languages
+        - interests
+        - references
+content:
+  basics:
+    name: Morteza Pourkazemi
+    headline: Senior Software Engineer | Backend Architecture | Scalability & Performance
+    phone: "+49 178 803 1485"
+    email: mortzprk@protonmail.com
+    url: https://mortz.dev
+    summary: |
+      9 years scaling systems and growing teams. Architected the multi-subscription system now powering HelloFresh's core platform. Consolidated 12 microservices into a maintainable monorepo. Optimized batch processing from 30min to 3min. Company-wide Kafka Streams expert at HelloFresh. Promoted to interviewer at Cafe Bazaar within a year. I build systems that last and mentor engineers who grow.
+  location:
+    city: Berlin
+    region: Berlin
+    country: Germany
+  profiles:
+    - network: GitHub
+      url: https://github.com/mortezaPRK/
+      username: mortezaPRK
+    - network: LinkedIn
+      url: https://linkedin.com/in/mortzprk/
+      username: mortzprk
+  work:
+    - name: HelloFresh SE
+      url: https://hellofresh.com
+      startDate: Nov 1, 2022
+      endDate:
+      position: Senior Software Engineer
+      summary: |
+        - Architected multi-subscription per customer system, now backbone of HelloFresh
+        - Company-wide Kafka Streams expert; deprecated internal framework to reduce complexity
+        - Designed sidecar pattern for GDPR compliance across microservices
+        - Mentored frontend engineer to full backend proficiency in 6 months
+        - Created debugging documentation enabling 24/7 on-call coverage without backend engineers
+        - Made cross-team contributions with PRs to internal tools used company-wide
+      keywords:
+        - Go
+        - Kotlin
+        - Kafka Streams
+        - Kubernetes
+        - System Architecture
+        - Performance
+        - Mentoring
+    - name: TDD
+      url: https://tdd.ir
+      startDate: Feb 1, 2022
+      endDate: Oct 1, 2022
+      position: Lead Software Engineer
+      summary: |
+        - Led team of 8 engineers for e-commerce platform
+        - Consolidated 12 microservices into single monorepo with Protobuf contracts
+        - Reduced deployment complexity from 12 deploys to 1 unified deployment
+        - Established engineering standards and technical direction
+      keywords:
+        - Go
+        - Python
+        - Protobuf
+        - Kubernetes
+        - Architecture
+        - Technical Leadership
+    - name: Cafe Bazaar
+      url: https://cafebazaar.ir
+      startDate: Aug 1, 2020
+      endDate: Mar 1, 2022
+      position: Senior Software Engineer
+      summary: |
+        - Built high-traffic advertising platform at Iran's largest app store (45M+ users)
+        - Promoted to interviewer and mentor within 1 year
+        - Created interview documentation and evaluation criteria
+        - Designed metrics and dashboards for efficient on-call operations
+        - Mastered production logging and monitoring at scale
+      keywords:
+        - Go
+        - Python
+        - PostgreSQL
+        - Apache Kafka
+        - Kubernetes
+        - High Traffic
+        - Interviewing
+        - Mentoring
+    - name: Raypo
+      url: https://raypo.ir
+      startDate: Jul 1, 2017
+      endDate: Mar 1, 2020
+      position: Software Engineer
+      summary: |
+        - Built game serving 12K concurrent users as solo developer
+        - Optimized batch processing from 30 minutes to 3 minutes via database redesign
+        - Led Python 2→3 migration; refactored codebase to testable system in 3 months
+        - Learned Kubernetes bare metal setup (the hard way)
+      keywords:
+        - PHP
+        - Python
+        - PostgreSQL
+        - Performance Optimization
+        - Database Design
+  languages:
+    - language: English
+      fluency: Full Professional Proficiency
+    - language: German
+      fluency: Elementary Proficiency
+  skills:
+    - name: Languages & Databases
+      level: Expert
+      keywords:
+        - Go
+        - Golang
+        - Python
+        - SQL
+        - PostgreSQL
+        - Redis
+        - Kafka Streams
+    - name: Architecture & Infrastructure
+      level: Advanced
+      keywords:
+        - Microservices
+        - Distributed Systems
+        - Kubernetes
+        - Terraform
+        - Helm
+        - AWS
+        - GCP
+    - name: Leadership
+      level: Advanced
+      keywords:
+        - Technical Mentoring
+        - Interviewing
+        - Team Building
+        - Cross-team Collaboration
+    - name: Additional
+      level: Advanced
+      keywords:
+        - Event-Driven Architecture
+        - Agile
+        - CI/CD
+        - Problem Solving
+  projects:
+    - name: kmir
+      url: https://github.com/mortezaPRK/kmir
+      startDate: Jan 1, 2023
+      summary: Kafka mirror CLI for local development — mirrors production topics for testing. Published on Docker Hub.
+      keywords:
+        - Go
+        - Kafka
+  education:
+    - institution: University of Tehran
+      url: https://ut.ac.ir/
+      degree: Bachelor
+      area: Physics
+      startDate: Sep 1, 2012
+      endDate: Jul 1, 2017
+      summary: |
+        - Thesis: Black hole simulation using Mathematica
+        - CERN collaboration: Developed simulation software for CMS detector installation project
+  awards: []
+  certificates: []
+  publications: []
+  references: []
+  interests: []
+  volunteer: []
+
+layout:
+  locale:
+    language: en
+  page:
+    margins:
+      top: 2.5cm
+      left: 1.5cm
+      right: 1.5cm
+      bottom: 2.5cm
+    showPageNumbers: true
+  template: moderncv-banking
+  typography:
+    fontSize: 11pt

@@ -1,0 +1,243 @@
+# yaml-language-server: $schema=https://yamlresume.dev/schema.json
+---
+layouts:
+  - engine: latex
+    sections:
+      order:
+        - basics
+        - work
+        - skills
+        - certificates
+        - projects
+        - education
+        - awards
+        - volunteer
+        - publications
+        - languages
+        - interests
+        - references
+content:
+  basics:
+    name: Morteza Pourkazemi
+    headline: Senior Backend Engineer | Go, Kafka, PostgreSQL | 9 Years Experience
+    phone: "+49 178 803 1485"
+    email: mortzprk@protonmail.com
+    url: https://mortz.dev
+    summary: |
+      9 years building backend systems from scratch to scale. Sole backend engineer at HelloFresh New Ventures for 3 years, architecting the multi-subscription system now powering the core platform. Known for fast delivery (onboarded 2x faster), deep technical ownership (company-wide Kafka Streams expert), and performance wins (30min → 3min optimization). I ship fast, mentor others, and take ownership end-to-end.
+  location:
+    city: Berlin
+    region: Berlin
+    country: Germany
+  profiles:
+    - network: GitHub
+      url: https://github.com/mortezaPRK/
+      username: mortezaPRK
+    - network: LinkedIn
+      url: https://linkedin.com/in/mortzprk/
+      username: mortzprk
+  work:
+    - name: HelloFresh SE
+      url: https://hellofresh.com
+      startDate: Nov 1, 2022
+      endDate:
+      position: Senior Software Engineer
+      summary: |
+        - Architected multi-subscription per customer system, now backbone of HelloFresh supporting families
+        - Sole backend engineer managing 4 services across 3 brands (Gutshop, Pet Stable)
+        - Delivered first Kotlin/Kafka Streams project in 1 month (2x faster than typical onboarding)
+        - Became company-wide Kafka Streams expert; deprecated internal framework to reduce abstraction
+        - Designed sidecar pattern for GDPR compliance in microservices architecture
+        - Created debugging playbooks enabling frontend engineers to handle backend on-call
+        - Mentored frontend engineer to backend (JavaScript → Go/Kubernetes/Postgres in 6 months)
+      keywords:
+        - Go
+        - Kotlin
+        - Kafka Streams
+        - Kubernetes
+        - Helm
+        - Terraform
+        - PostgreSQL
+        - Microservices
+    - name: TDD
+      url: https://tdd.ir
+      startDate: Feb 1, 2022
+      endDate: Oct 1, 2022
+      position: Lead Software Engineer
+      summary: |
+        - Led team of 8 engineers (3 backend, 2 frontend, 2 Android, 1 iOS) for e-commerce platform
+        - Consolidated 12 microservices into single monorepo with Protobuf contracts
+        - Reduced deployment complexity from 12 separate deploys to 1 unified deployment
+        - Established engineering standards and technical direction for the team
+        - Acted as technical shield between leadership and engineering team
+      keywords:
+        - Go
+        - Python
+        - Protobuf
+        - Kubernetes
+        - GKE
+        - Redis
+        - PostgreSQL
+        - Apache Kafka
+        - Technical Leadership
+    - name: Cafe Bazaar
+      url: https://cafebazaar.ir
+      startDate: Aug 1, 2020
+      endDate: Mar 1, 2022
+      position: Senior Software Engineer
+      summary: |
+        - Built high-traffic advertising platform at Iran's largest app store (45M+ users)
+        - Promoted to interviewer and mentor within 1 year; created interview evaluation criteria
+        - Designed metrics and dashboards for efficient on-call operations
+        - Deep-dived into Go, PostgreSQL, Airflow, and async communication patterns
+      keywords:
+        - Go
+        - Python
+        - Django
+        - PostgreSQL
+        - Apache Kafka
+        - Kubernetes
+        - Airflow
+        - gRPC
+        - High Traffic
+    - name: Cosmopolis
+      url: https://cosmopolis.fr
+      startDate: Mar 1, 2020
+      endDate: Apr 1, 2021
+      position: Software Engineer
+      summary: |
+        - Built medical web applications with Django and GCP infrastructure
+        - First international exposure; remote collaboration with distributed team
+        - Implemented CI/CD pipelines with GitLab and GKE
+      keywords:
+        - Python
+        - Django
+        - GCP
+        - GKE
+        - GitLab CI/CD
+        - Firebase
+    - name: Raypo
+      url: https://raypo.ir
+      startDate: Jul 1, 2017
+      endDate: Mar 1, 2020
+      position: Software Engineer
+      summary: |
+        - Built production game from scratch as solo developer; launched to 12K concurrent users
+        - Optimized backend processing from 30 minutes to 3 minutes by moving logic to database
+        - Led Python 2→3 and Django upgrade; refactored codebase into testable system in 3 months
+        - Learned Kubernetes bare metal setup (the hard way)
+        - Collaborated with mobile/frontend teams on back-office Angular application
+      keywords:
+        - PHP
+        - Python
+        - Django
+        - PostgreSQL
+        - Redis
+        - Docker
+        - Kubernetes
+        - Performance Optimization
+  languages:
+    - language: English
+      fluency: Full Professional Proficiency
+    - language: German
+      fluency: Elementary Proficiency
+    - language: Farsi
+      fluency: Native or Bilingual Proficiency
+  skills:
+    - name: Languages
+      level: Expert
+      keywords:
+        - Go
+        - Golang
+        - Python
+        - SQL
+        - Kotlin
+        - TypeScript
+    - name: Databases & Messaging
+      level: Expert
+      keywords:
+        - PostgreSQL
+        - Redis
+        - Apache Kafka
+        - Kafka Streams
+        - RabbitMQ
+    - name: Infrastructure
+      level: Advanced
+      keywords:
+        - Kubernetes
+        - Docker
+        - Terraform
+        - Helm
+        - ArgoCD
+        - AWS
+        - GCP
+    - name: Backend & APIs
+      level: Expert
+      keywords:
+        - REST API
+        - gRPC
+        - Protobuf
+        - GraphQL
+        - Microservices
+        - Django
+        - FastAPI
+    - name: Additional
+      level: Advanced
+      keywords:
+        - Distributed Systems
+        - Event-Driven Architecture
+        - Agile
+        - CI/CD
+        - Problem Solving
+  projects:
+    - name: kmir
+      url: https://github.com/mortezaPRK/kmir
+      startDate: Jan 1, 2023
+      summary: Kafka mirror CLI for local development — mirrors production topics for testing. Published on Docker Hub.
+      keywords:
+        - Go
+        - Kafka
+    - name: cec-keyboard
+      url: https://github.com/mortezaPRK/cec-keyboard
+      startDate: Jan 1, 2022
+      summary: Use TV remote as keyboard through CEC protocol
+      keywords:
+        - Go
+        - Hardware
+    - name: container-mdns
+      url: https://github.com/mortezaPRK/container-mdns
+      startDate: Jan 1, 2021
+      summary: Container networking tool for mDNS discovery
+      keywords:
+        - Go
+        - Networking
+  education:
+    - institution: University of Tehran
+      url: https://ut.ac.ir/
+      degree: Bachelor
+      area: Physics
+      startDate: Sep 1, 2012
+      endDate: Jul 1, 2017
+      summary: |
+        - Thesis: Black hole simulation using Mathematica
+        - CERN collaboration: Developed simulation software in C++/Python for CMS detector project
+  awards: []
+  certificates: []
+  publications: []
+  references: []
+  interests: []
+  volunteer: []
+
+layout:
+  locale:
+    language: en
+  page:
+    margins:
+      top: 2.5cm
+      left: 1.5cm
+      right: 1.5cm
+      bottom: 2.5cm
+    showPageNumbers: true
+  template: moderncv-banking
+  typography:
+    fontSize: 11pt

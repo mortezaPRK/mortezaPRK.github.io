@@ -7,4 +7,4 @@ toc: false
 
 Hey there! I'm Morteza, a software engineer who loves to deal with a new challenge every day.
 
-In case you're wondering, here is my [Resume](/cv.pdf)
+In case you're wondering, here is my [Resume](/cv-general.pdf)
