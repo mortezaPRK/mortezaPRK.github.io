@@ -4,7 +4,7 @@ description: A Dart port of Mozilla's Readability.js for extracting readable con
 summary: |
   I've published a Dart port of Mozilla's Readability.js that can extract clean, readable content from any web page.
   Available as a Dart package, CLI tool, or JavaScript library.
-date: 2025-04-03T10:00:00+02:00
+date: 2026-04-04T10:00:00+02:00
 draft: false
 toc: false
 images:
