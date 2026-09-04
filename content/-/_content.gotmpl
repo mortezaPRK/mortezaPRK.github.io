@@ -1,0 +1,31 @@
+{{- $root := site.Params.goVanityRoot -}}
+{{- if not $root -}}
+  {{- errorf "params.goVanityRoot must be configured" -}}
+{{- end -}}
+
+{{- range $name, $target := site.Data.go_packages.packages -}}
+  {{- if not (findRE `^[A-Za-z0-9][A-Za-z0-9._-]*$` $name) -}}
+    {{- errorf "invalid Go vanity package name %q" $name -}}
+  {{- end -}}
+  {{- if not $target.vcs -}}
+    {{- errorf "Go vanity package %q has no vcs" $name -}}
+  {{- end -}}
+  {{- if not $target.repository -}}
+    {{- errorf "Go vanity package %q has no repository" $name -}}
+  {{- end -}}
+
+  {{- $importPath := printf "%s/%s" $root $name -}}
+  {{- $params := dict
+    "import_path" $importPath
+    "repository" $target.repository
+    "vcs" $target.vcs
+  -}}
+  {{- $page := dict
+    "kind" "page"
+    "params" $params
+    "path" $name
+    "title" $importPath
+    "type" "go-package"
+  -}}
+  {{- $.AddPage $page -}}
+{{- end -}}

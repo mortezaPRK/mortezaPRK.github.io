@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="go-import" content="{{ index .Params "import_path" }} {{ .Params.vcs }} {{ .Params.repository }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="0; url={{ .Params.repository }}">
+    <title>{{ .Title }}</title>
+  </head>
+  <body>
+    <p><a href="{{ .Params.repository }}">{{ .Params.repository }}</a></p>
+  </body>
+</html>

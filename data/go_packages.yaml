@@ -1,0 +1,7 @@
+packages:
+  gstream:
+    vcs: git
+    repository: https://github.com/mortezaPRK/gstream
+  kmir:
+    vcs: git
+    repository: https://github.com/mortezaPRK/kmir
