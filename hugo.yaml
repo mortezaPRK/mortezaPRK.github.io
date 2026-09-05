@@ -19,7 +19,7 @@ permalinks:
   posts: /posts/:year/:month/:title/
 
 params:
-  goVanityRoot: go.mortz.dev/-
+  goVanityRoot: mortz.dev/go
   enableSharingButtons: true
   logo:
     logoMark: ">"
